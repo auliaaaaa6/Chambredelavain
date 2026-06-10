@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Chambre de la Vain – CHMB</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar" id="sidebar">
+  <button class="close-btn" id="closeBtn">✕</button>
+  <ul>
+    <li><a href="#" onclick="closeSidebar(); navigate('home'); return false;">SHOPS</a></li>
+    <li><a href="#" onclick="closeSidebar(); navigate('about'); return false;">ABOUT US</a></li>
+    <li><a href="#" onclick="closeSidebar(); return false;">LOOK BOOK</a></li>
+  </ul>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+<!-- ════════════════════════════════════════
+     PAGE 1 – HOMEPAGE
+════════════════════════════════════════ -->
+<div id="page-home" class="page active">
+  <nav class="nav">
+    <button class="nav__hamburger" id="menuBtn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <img src="image2/image 12.png" alt="Logo" style="height:38px;width:auto;position:absolute;left:15%;transform:translateX(-15%);mix-blend-mode:screen;">
+    <div class="nav__actions">
+      <span class="nav__icon">
+        <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/></svg>
+      </span>
+      <span class="nav__icon">
+        <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z"/></svg>
+      </span>
+    </div>
+  </nav>
+
+  <div class="page-content">
+    <!-- Hero -->
+    <div class="hero">
+      <img src="image2/image1.jpg.png" alt="CHMB Hero" class="hero__img">
+      <div class="hero__overlay"></div>
+    </div>
+
+    <!-- New Arrival -->
+    <div class="section-header">
+      <span class="section-header__title">New Arrival</span>
+      <a class="section-header__link" href="#">View All</a>
+    </div>
+    <div class="product-scroll">
+      <div class="product-card" onclick="goDetail('IMG_1448.PNG','IMG_8786.WEBP', 'IMG_8787.WEBP','Boxy Hoodie Chambredelavain – Sweet Cake Black','Rp 1.070.000', true)">
+        <div class="product-card__img">
+          <img src="image2/IMG_1448.PNG" alt="Hoodie Black">
+        </div>
+        <div class="product-card__info">
+          <div class="product-card__name">Boxy Hoodie Chambredelavain – Sweet Cake Black</div>
+          <div class="product-card__price">Rp 1.070.000</div>
+        </div>
+      </div>
+      <div class="product-card" onclick="goDetail('IMG_1450.PNG','IMG_8790.WEBP', 'IMG_8788.WEBP','Boxy Hoodie Raglan Chambredelavain  – Omaments Stars','Rp 1.070.000', true)">
+        <div class="product-card__img">
+          <img src="image2/IMG_1450.PNG" alt="Hoodie">
+        </div>
+        <div class="product-card__info">
+          <div class="product-card__name">Boxy Hoodie Raglan Chambredelavain – Omaments Stars</div>
+          <div class="product-card__price">Rp 1.070.000</div>
+        </div>
+      </div>
+      <div class="product-card" onclick="goDetail('IMG_1454.PNG', 'IMG_8791.WEBP','IMG_8792.WEBP','Body Hood Chambre de la Vain – Fiery Black','Rp 1.100.000', true)">
+        <div class="product-card__img">
+          <img src="image2/IMG_1454.PNG" alt="Hoodie 3">
+        </div>
+        <div class="product-card__info">
+          <div class="product-card__name">Boxy Hoodie Chambredelavain – Fiery Sky Black</div>
+          <div class="product-card__price">Rp 1.100.000</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Last Call -->
+    <div class="section-header">
+      <span class="section-header__title">Last Call</span>
+      <a class="section-header__link" href="#">View All</a>
+    </div>
+    <div class="product-scroll">
+      <div class="product-card" onclick="goDetail('IMG_1452.PNG','IMG_1452.PNG','IMG_1452.PNG','Zipper Chambredelavain – Special Print Black','Rp 1.200.000', false)">
+        <div class="product-card__img">
+          <img src="image2/IMG_1452.PNG" alt="Hoodie 3">
+        </div>
+        <div class="product-card__info">
+          <div class="product-card__name">Zipper Chambredelavain – Special Print Black</div>
+          <div class="product-card__price">Rp 1.200.000</div>
+        </div>
+      </div>
+      <div class="product-card" onclick="goDetail('IMG_1453.PNG', 'IMG_8793.WEBP', 'IMG_8794.WEBP','Body Hood Chambredelavain – With Stupid Red','Rp 1.070.000', false)">
+        <div class="product-card__img">
+          <img src="image2/IMG_1453.PNG" alt="Jacket Orange">
+        </div>
+        <div class="product-card__info">
+          <div class="product-card__name">Boxy Hoodie Chambredelavain – With Stupid Red </div>
+          <div class="product-card__price">Rp 1.070.000</div>
+        </div>
+      </div>
+      <div class="product-card" onclick="goDetail('IMG_1456.PNG','IMG_8795.WEBP', 'IMG_8796.WEBP','Reguler Hoodie Velour Chambredelavain – Luxe Black','Rp 1.070.000', false)">
+        <div class="product-card__img">
+          <img src="image2/IMG_1456.PNG" alt="Hoodie Black">
+        </div>
+        <div class="product-card__info">
+          <div class="product-card__name">Reguler Hoodie Velour Chambredelavain – Luxe Black</div>
+          <div class="product-card__price">Rp 1.070.000</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- IG Footer -->
+    <div class="ig-footer">
+      <div class="ig-footer__label">Find us on Instagram</div>
+      <div class="ig-footer__handle">@chambredelavain</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════
+     PAGE 2 – ABOUT US
+════════════════════════════════════════ -->
+<div class="about-body" style="background:#fff; color:#000;"></div>
+<div id="page-about" class="page">
+  <nav class="nav">
+    <button class="nav__hamburger" id="menuBtnAbout" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <img src="image2/image 12.png" alt="Logo" style="height:38px;width:auto;position:absolute;left:15%;transform:translateX(-15%);mix-blend-mode:screen;">
+    <div class="nav__actions">
+      <span class="nav__icon">
+        <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/></svg>
+      </span>
+      <span class="nav__icon">
+        <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z"/></svg>
+      </span>
+    </div>
+  </nav>
+
+  <div class="page-content">
+    <div class="about-hero">
+      <div style="width:100%;background:#fff;">
+        <div style="display:flex;">
+        <img src="image2/image 6.png" alt="About Us Hero" style="width:100%;height:300px;object-fit:cover;">
+    </div>
+    </div>
+
+    <div class="about-body">
+      <div class="about-eyebrow">From Twelve Pieces to Thousand</div>
+      <h1 class="about-headline">From Twelve<br>Pieces to<br>Thousand</h1>
+      <p class="about-text">
+        Chambre de la Vain adalah brand lokal yang berbasis di Bandung, Indonesia.
+        Berdiri pada tahun 2021, diawali dengan meriliskan hanya 12 pieces kaos grafis
+        dan sejak itu telah menjual ribuan produk yang terjual habis hampir segera setelah setiap rilis.
+      </p>
+      <p class="about-text">
+        Per 2022, Chambre de la Vain telah membangun kehadiran yang signifikan di kancah streetwear
+        lokal — tidak hanya melalui media sosial dengan para pengikut setianya, tetapi juga dengan
+        melibatkan audiens dan konsumen melalui kolaborasi dengan brand lokal lain, influencer
+        media sosial, dan seniman.
+      </p>
+      <div class="ig-footer" style="margin-top:0;">
+      <div class="ig-footer__label">Find us on Instagram</div>
+      <div class="ig-footer__handle">@chambredelavain</div>
+    </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════
+     PAGE 3 – PRODUCT DETAIL
+════════════════════════════════════════ -->
+<div id="page-detail" class="page">
+  <nav class="nav">
+    <button class="back-btn" onclick="goHome()" aria-label="Back">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+   <img src="image2/image 12.png" alt="Logo" style="height:38px;width:auto;position:absolute;left:15%;transform:translateX(-15%);mix-blend-mode:screen;">
+    <div class="nav__actions">
+      <span class="nav__icon">
+        <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/></svg>
+      </span>
+      <span class="nav__icon">
+        <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z"/></svg>
+      </span>
+    </div>
+  </nav>
+
+  <div style="padding-bottom:80px;">
+    <!-- Gallery -->
+    <div class="detail-gallery" id="detail-gallery" style="display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;">
+      <img id="detail-img" src="image2/IMG_1448.PNG" alt="Product" style="min-width:100%;scroll-snap-align:start;">
+      <img id="detail-img-2" src="image2/IMG_1448.PNG" alt="Product 2" style="min-width:100%;scroll-snap-align:start;">
+      <img id="detail-img-3" src="image2/IMG_1448.PNG" alt="Product 3" style="min-width:100%;scroll-snap-align:start;">
+    </div>
+    <div class="gallery-dots">
+      <span class="active"></span><span></span><span></span>
+    </div>
+
+    <div class="detail-body">
+      <!-- Badges -->
+      <div>
+        <span class="detail-badge in-stock">In Stock</span>
+        <span class="detail-badge new">RELEASE TODAY</span>
+      </div>
+
+      <!-- Title & Price -->
+      <div class="detail-title" id="detail-title">-</div>
+      <div class="detail-price" id="detail-price">-</div>
+
+      <div class="detail-divider"></div>
+
+      <!-- Qty Info -->
+      <div class="detail-boxqty">
+        <div class="detail-qty">Quantity Information</div>
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <div class="qty-info">Maximum Quantity</div>
+          <div class="qty">1</div>
+        </div>
+      </div>
+
+      <!-- Size -->
+      <div class="detail-section" style="margin-top:20px;">
+        <div class="detail-label"><b>Size</b></div>
+        <div class="size-row">
+          <button class="size-btn">S</button>
+          <button class="size-btn active">M</button>
+          <button class="size-btn">L</button>
+          <button class="size-btn">XL</button>
+        </div>
+      </div>
+
+      <!-- Qty stepper -->
+      <div style="display:flex;align-items:center;gap:12px;margin:16px 0;">
+        <div class="qty-row">
+          <button onclick="changeQty(-1)">−</button>
+          <div class="qty-row__val" id="qty-val">1</div>
+          <button onclick="changeQty(1)">+</button>
+        </div>
+      </div>
+
+      <div class="detail-divider"></div>
+
+      <!-- Materials -->
+      <div class="detail-section">
+        <div class="detail-label"><b>Materials:</b></div>
+        <div class="detail-info-text">
+          Combed 20s<br>
+          Screen Printed In Front<br>
+          Regular Fit<br>
+          Color: Black
+        </div>
+      </div>
+
+      <!-- Size Chart -->
+      <div class="detail-section">
+        <div class="detail-label"><b>Size Chart:</b></div>
+        <div class="detail-info-size">
+          <table>
+            <tr><td><b>S</b></td><td>67 cm × 55 cm × 22 cm</td></tr>
+            <tr><td><b>M</b></td><td>69 cm × 58 cm × 23 cm</td></tr>
+            <tr><td><b>L</b></td><td>71 cm × 57 cm × 24 cm</td></tr>
+            <tr><td><b>XL</b></td><td>73 cm × 58 cm × 25 cm</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="detail-divider"></div>
+
+      <!-- Refund -->
+      <div class="detail-section">
+        <div class="detail-label"><b>Ketentuan Refund:</b></div>
+        <div class="detail-info-text">
+          Refund berlaku apabila menyertakan video saat unboxing sebagai bukti.
+          Refund hanya dapat diproses apabila terdapat kesalahan pengiriman atau
+          produk rusak dari pihak kami.<br><br>
+          Terima kasih atas perhatiannya
+        </div>
+      </div>
+
+      <div class="detail-divider"></div>
+
+      <!-- Delivery -->
+      <div class="delivery-box">
+        <h3 class="delivery-label">Delivery</h3>
+        <div class="delivery-row">
+          <span>Deliver To:</span>
+          <select>
+            <option>Pick Area</option>
+          </select>
+        </div>
+        <div class="delivery-row">
+          <span>Weight:</span>
+          <span>900g</span>
+        </div>
+        <div class="delivery-note">
+          Shipped within 3 days,<br>
+          (Upon confirmation of payment)
+        </div>
+      </div>
+
+      <button class="btn-message">💬 Message Chambredelavain?</button>
+      <button class="btn-addcart">Add to Cart</button>
+    </div>
+
+    <!-- IG Footer -->
+    <div class="ig-footer" style="margin-top:0;">
+      <div class="ig-footer__label">Find us on Instagram</div>
+      <div class="ig-footer__handle">@chambredelavain</div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
