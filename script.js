@@ -26,12 +26,25 @@ function navigate(page) {
 // ======================
 // DETAIL PAGE
 // ======================
+function setMainImg(el) {
+  document.getElementById("detail-img-main").src = el.src;
+  document.querySelectorAll(".thumb").forEach(t => t.classList.remove("active"));
+  el.classList.add("active");
+}
+
 function goDetail(img1, img2, img3, name, price, isNew) {
+  const imgs = [img1, img2, img3];
+// Mobile Gallery 
   document.getElementById("detail-img").src = "image2/" + img1;
-  const path = "image2/" + img1 + img2 + img3;
-  console.log("Loading image:", path);
   document.getElementById("detail-img-2").src = "image2/" + img2;
   document.getElementById("detail-img-3").src = "image2/" + img3;
+// Dekstop Gallery
+  const thumbs = document.querySelectorAll(".thumb");
+  thumbs.forEach((t, i) => { t.src = "image2/" + imgs[i]; });
+  document.getElementById("detail-img-main").src = "image2/" + img1;
+  thumbs.forEach(t => t.classList.remove("active"));
+  thumbs[0].classList.add("active");
+
   document.getElementById("detail-title").textContent = name;
   document.getElementById("detail-price").textContent = price;
   document.querySelector(".detail-badge.new").style.display = isNew ? "inline-block" : "none";

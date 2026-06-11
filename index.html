@@ -28,7 +28,12 @@
     <button class="nav__hamburger" id="menuBtn" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
-    <img src="image2/image 12.png" alt="Logo" style="height:38px;width:auto;position:absolute;left:15%;transform:translateX(-15%);mix-blend-mode:screen;">
+    <ul class="nav__links">
+      <li><a href="#" onclick="navigate('home'); return false;">SHOPS</a></li>
+      <li><a href="#" onclick="navigate('about'); return false;">ABOUT US</a></li>
+      <li><a href="#">LOOK BOOK</a></li>
+    </ul>
+    <img class="nav__logo-img" src="image2/image 12.png" alt="Logo" style="height:38px;width:auto;position:absolute;left:50%;transform:translateX(-50%);mix-blend-mode:screen;">
     <div class="nav__actions">
       <span class="nav__icon">
         <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/></svg>
@@ -135,7 +140,12 @@
     <button class="nav__hamburger" id="menuBtnAbout" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
-    <img src="image2/image 12.png" alt="Logo" style="height:38px;width:auto;position:absolute;left:15%;transform:translateX(-15%);mix-blend-mode:screen;">
+     <ul class="nav__links">
+      <li><a href="#" onclick="navigate('home'); return false;">SHOPS</a></li>
+      <li><a href="#" onclick="navigate('about'); return false;">ABOUT US</a></li>
+      <li><a href="#">LOOK BOOK</a></li>
+    </ul>
+    <img class="nav__logo-img" src="image2/image 12.png" alt="Logo" style="height:38px;width:auto;position:absolute;left:15%;transform:translateX(-15%);mix-blend-mode:screen;">
     <div class="nav__actions">
       <span class="nav__icon">
         <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/></svg>
@@ -148,10 +158,8 @@
 
   <div class="page-content">
     <div class="about-hero">
-      <div style="width:100%;background:#fff;">
-        <div style="display:flex;">
-        <img src="image2/image 6.png" alt="About Us Hero" style="width:100%;height:300px;object-fit:cover;">
-    </div>
+      <div>
+        <img src="image2/image 6.png" alt="About Us Hero" >
     </div>
 
     <div class="about-body">
@@ -168,11 +176,11 @@
         melibatkan audiens dan konsumen melalui kolaborasi dengan brand lokal lain, influencer
         media sosial, dan seniman.
       </p>
-      <div class="ig-footer" style="margin-top:0;">
-      <div class="ig-footer__label">Find us on Instagram</div>
-      <div class="ig-footer__handle">@chambredelavain</div>
     </div>
       </div>
+       <div class="ig-footer">
+      <div class="ig-footer__label">Find us on Instagram</div>
+      <div class="ig-footer__handle">@chambredelavain</div>
     </div>
   </div>
 </div>
@@ -186,8 +194,13 @@
     <button class="back-btn" onclick="goHome()" aria-label="Back">
       <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
     </button>
-   <img src="image2/image 12.png" alt="Logo" style="height:38px;width:auto;position:absolute;left:15%;transform:translateX(-15%);mix-blend-mode:screen;">
-    <div class="nav__actions">
+     <ul class="nav__links">
+      <li><a href="#" onclick="navigate('home'); return false;">SHOPS</a></li>
+      <li><a href="#" onclick="navigate('about'); return false;">ABOUT US</a></li>
+      <li><a href="#">LOOK BOOK</a></li>
+    </ul> 
+   <img class="nav__logo-img" src="image2/image 12.png" alt="Logo" style="height:38px;width:auto;position:absolute;left:15%;transform:translateX(-15%);mix-blend-mode:screen;">
+   <div class="nav__actions">
       <span class="nav__icon">
         <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/></svg>
       </span>
@@ -197,16 +210,29 @@
     </div>
   </nav>
 
-  <div style="padding-bottom:80px;">
-    <!-- Gallery -->
-    <div class="detail-gallery" id="detail-gallery" style="display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;">
-      <img id="detail-img" src="image2/IMG_1448.PNG" alt="Product" style="min-width:100%;scroll-snap-align:start;">
-      <img id="detail-img-2" src="image2/IMG_1448.PNG" alt="Product 2" style="min-width:100%;scroll-snap-align:start;">
-      <img id="detail-img-3" src="image2/IMG_1448.PNG" alt="Product 3" style="min-width:100%;scroll-snap-align:start;">
-    </div>
-    <div class="gallery-dots">
-      <span class="active"></span><span></span><span></span>
-    </div>
+  <div class="detail-layout">
+  <!-- Gallery -->
+ <div class="detail-gallery-wrap">
+  <!-- Mobile: horizontal scroll -->
+  <div class="detail-gallery" id="detail-gallery">
+    <img id="detail-img" src="image2/IMG_1448.PNG" alt="Product">
+    <img id="detail-img-2" src="image2/IMG_1448.PNG" alt="Product 2">
+    <img id="detail-img-3" src="image2/IMG_1448.PNG" alt="Product 3">
+  </div>
+  <div class="gallery-dots">
+    <span class="active"></span><span></span><span></span>
+  </div>
+
+  <!-- Desktop: main image + thumbnails -->
+  <div class="detail-main-img-wrap">
+    <img id="detail-img-main" src="image2/IMG_1448.PNG" alt="Product">
+  </div>
+  <div class="detail-thumbnails" id="detail-thumbnails">
+    <img class="thumb active" src="image2/IMG_1448.PNG" onclick="setMainImg(this)">
+    <img class="thumb" src="image2/IMG_1448.PNG" onclick="setMainImg(this)">
+    <img class="thumb" src="image2/IMG_1448.PNG" onclick="setMainImg(this)">
+  </div>
+</div>
 
     <div class="detail-body">
       <!-- Badges -->
@@ -216,8 +242,16 @@
       </div>
 
       <!-- Title & Price -->
-      <div class="detail-title" id="detail-title">-</div>
-      <div class="detail-price" id="detail-price">-</div>
+      <div>
+        <div class="detail-title" id="detail-title">-</div>
+        <div class="price-row">
+          <div class="detail-price" id="detail-price">-</div>
+
+          <button class="wishlist-btn" onclick="toggleWish(this)">
+            ♡
+          </button>
+        </div>
+      </div>
 
       <div class="detail-divider"></div>
 
@@ -310,15 +344,19 @@
         </div>
       </div>
 
-      <button class="btn-message">💬 Message Chambredelavain?</button>
+     <button class="btn-message">💬 Message Chambredelavain?</button>
       <button class="btn-addcart">Add to Cart</button>
     </div>
 
-    <!-- IG Footer -->
-    <div class="ig-footer" style="margin-top:0;">
-      <div class="ig-footer__label">Find us on Instagram</div>
-      <div class="ig-footer__handle">@chambredelavain</div>
-    </div>
+  </div> 
+
+  <!-- IG Footer full width -->
+  <div class="ig-footer">
+    <div class="ig-footer__label">Find us on Instagram</div>
+    <div class="ig-footer__handle">@chambredelavain</div>
+  </div>
+</div>
+
   </div>
 </div>
 
